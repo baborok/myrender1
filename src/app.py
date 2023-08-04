@@ -35,8 +35,8 @@ def update_graphs(selected_columns):
 
     for col in selected_columns:
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x=df1[time_column], y=df1[col], mode='lines', name=f'Файл 1 - {col}', line=dict(color='blue')))
-        fig.add_trace(go.Scatter(x=df2[time_column], y=df2[col], mode='lines', name=f'Файл 2 - {col}', line=dict(color='red')))
+        fig.add_trace(go.Scatter(x=df1[time_column], y=df1[col], mode='lines', name=f'Генератор - {col}', line=dict(color='blue')))
+        fig.add_trace(go.Scatter(x=df2[time_column], y=df2[col], mode='lines', name=f'Сеть - {col}', line=dict(color='red')))
         fig.update_layout(title=f'График {col} по времени',
                           xaxis_title='Время',
                           yaxis_title=col)
